@@ -7,6 +7,7 @@ test('should test valids JS Objects', function(assert) {
   assert.deepEqual(isJsObject({a: 1}), true);
   /*jshint -W010 */
   assert.deepEqual(isJsObject(new Object()), true);
+  assert.deepEqual(isJsObject(global), true);
   assert.end();
 });
 
